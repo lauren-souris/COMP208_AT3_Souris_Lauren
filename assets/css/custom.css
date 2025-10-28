@@ -1,0 +1,418 @@
+/* ============================================================
+   THEME VARIABLES
+   Edited by Lauren Souris
+   Based on "Forty" by HTML5 UP
+============================================================ */
+:root {
+  --bg: #0b1d37;           /* Main background */
+  --card: #1e293b;         /* Card panels */
+  --card-dark: #0f172a;    /* Darker panel / blockquote */
+  --text: #f8fafc;         /* Main body text */
+  --muted: #94a3b8;        /* Secondary text */
+  --link: #93c5fd;         /* Links */
+  --link-hover: #bfdbfe;
+  --accent: #3b82f6;       /* Buttons & highlights */
+  --accent-hover: #60a5fa;
+  --border: #334155;
+
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+
+  --font: "Inter", Arial, Helvetica, sans-serif;
+}
+
+/* ============================================================
+   GLOBAL STYLES
+============================================================ */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+  letter-spacing: 0.02em;
+}
+
+/* Links */
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* Inner spacing for main content */
+#main .inner {
+  padding: var(--space-6) var(--space-4);
+}
+
+section + section {
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#main p {
+  margin-bottom: var(--space-3);
+}
+
+/* ============================================================
+   CARD BLOCKS
+============================================================ */
+.card {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: var(--space-5);
+  color: var(--text);
+}
+
+/* ============================================================
+   BUTTONS (consistent + centered)
+============================================================ */
+.button,
+button,
+input[type="button"],
+input[type="submit"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: #000 !important;            /* Text always visible */
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 0.7rem 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1.2;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.25);
+}
+
+.button:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  background: var(--accent-hover);
+  color: #000 !important;   /* stays black on hover */
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   QUOTE GENERATOR
+============================================================ */
+.quote-widget {
+  max-width: 750px;
+  margin: var(--space-5) auto;
+  padding: var(--space-5) var(--space-4);
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  text-align: center;
+  color: var(--text);
+}
+
+.quote-widget h3 {
+  margin-bottom: var(--space-3);
+  font-size: 1.4rem;
+}
+
+.quote-widget blockquote {
+  background: var(--card-dark);
+  color: #f1f5f9;
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  border-left: 6px solid var(--accent);
+  border-radius: 8px;
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+/* ============================================================
+   GRADE CONVERTER TOOL
+============================================================ */
+#gctool, .grade-tool {
+  max-width: 800px;
+  margin: var(--space-6) auto;
+}
+
+#gctool .gct-card, .grade-tool {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: var(--space-5);
+}
+
+#gctool h1, #gctool h2, #gctool h3 {
+  color: #fff;
+}
+
+#gctool label {
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+#gctool input,
+#gctool select,
+#gctool button {
+  background: var(--card-dark);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+}
+
+#gctool input[type="number"] {
+  width: 220px;
+  height: 52px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 480px) {
+  #gctool input[type="number"] {
+    width: 100%;
+  }
+}
+
+#gctool table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--card-dark);
+}
+
+#gctool th, #gctool td {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  color: #f1f5f9;
+  text-align: left;
+}
+
+#gctool thead th {
+  background: #111827;
+}
+
+#gctool tbody tr:nth-child(odd) {
+  background: #0f172a;
+}
+
+#gctool tbody tr:nth-child(even) {
+  background: #111827;
+}
+
+.gc-result {
+  margin-top: 0.5rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.gc-badge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.25rem 0.6rem;
+  margin-left: 0.4rem;
+  color: #fff;
+}
+
+.gc-hd { background: #14532d; }
+.gc-d  { background: #065f46; }
+.gc-c  { background: #1d4ed8; }
+.gc-p  { background: #2563eb; }
+.gc-f  { background: #991b1b; }
+
+.hint {
+  color: var(--muted);
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* ============================================================
+   GRADE CONVERTER PAGE OVERRIDES
+   (white text for buttons and inputs)
+============================================================ */
+
+#gctool .button,
+#gctool button,
+#gctool input[type="button"],
+#gctool input[type="submit"] {
+  color: #fff !important;
+}
+
+#gctool .button:hover,
+#gctool button:hover,
+#gctool input[type="button"]:hover,
+#gctool input[type="submit"]:hover {
+  color: #fff !important;
+}
+
+/* Input field text + placeholder */
+#gctool input[type="text"],
+#gctool input[type="number"],
+#gctool select,
+#gctool textarea {
+  color: #fff !important;
+  caret-color: #fff;
+}
+
+#gctool ::placeholder {
+  color: rgba(255,255,255,0.75);
+}
+
+/* ============================================================
+   PROJECT SPOTLIGHTS (image + text)
+============================================================ */
+.spotlights > section {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-4) 0;
+}
+
+.spotlights .image {
+  flex: 0 0 40%;
+  max-width: 420px;
+}
+
+.spotlights .content {
+  flex: 1;
+}
+
+.spotlights .image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .spotlights > section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .spotlights .image {
+    max-width: 100%;
+  }
+}
+
+/* ============================================================
+   FEATURES GRID (Work Experience Cards)
+============================================================ */
+.features {
+  display: grid;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.features article {
+  background: var(--card);
+  border-radius: 14px;
+  padding: var(--space-4);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease;
+}
+
+.features article:hover {
+  transform: translateY(-3px);
+}
+
+/* ============================================================
+   CONTACT PAGE LAYOUT
+============================================================ */
+.contact-flex {
+  display: flex;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contact-left {
+  flex: 1 1 58%;
+}
+
+.contact-right {
+  flex: 1 1 38%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-right img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
+}
+
+@media (max-width: 900px) {
+  .contact-flex {
+    flex-direction: column;
+  }
+  .contact-right {
+    margin-top: var(--space-4);
+  }
+}
+
+/* ============================================================
+   CONTACT FORM POPUP MESSAGE
+============================================================ */
+#formPopup[hidden] {
+  display: none;
+}
+
+#formPopup.notice {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-top: 1rem;
+  box-shadow: var(--shadow);
+}
+
+/* ============================================================
+   UTILITY CLASSES
+============================================================ */
+.text-muted { color: var(--muted); }
+.center { text-align: center; }
+.mt-0 { margin-top: 0; }
+.mb-0 { margin-bottom: 0; }
+.mt-2 { margin-top: var(--space-2); }
+.mb-2 { margin-bottom: var(--space-2); }
+.mt-4 { margin-top: var(--space-4); }
+.mb-4 { margin-bottom: var(--space-4); }
