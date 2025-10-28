@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<!--
+  Forty by HTML5 UP
+  edited by Lauren Souris
+-->
+<html lang="en">
+  <head>
+    <title>Grade Converter Tool — Lauren Souris</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <!-- Custom Script -->
+    <script defer src="assets/js/custom.js"></script>
+  </head>
+
+  <body class="is-preload">
+    <div id="wrapper">
+
+      <!-- ================= HEADER ================= -->
+      <header id="header" class="alt">
+        <a href="index.html" class="logo">
+          <strong>Lauren Souris</strong> <span>Teaching Portfolio</span>
+        </a>
+        <nav><a href="#menu" aria-label="Open site menu">Menu</a></nav>
+      </header>
+
+      <!-- ================= MENU ================= -->
+      <nav id="menu" aria-label="Primary navigation">
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="gctool.html" aria-current="page">Grade Converter Tool</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- ================= BANNER ================= -->
+      <section id="banner" class="style2">
+        <div class="inner">
+          <span class="image">
+            <img src="images/pic07.jpg" alt="Header background" />
+          </span>
+          <header class="major">
+            <h1>Mark → Grade Converter</h1>
+          </header>
+          <div class="content">
+            <p>Enter a mark out of 100 to calculate the corresponding grade (HD / D / C / P / F).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= MAIN CONTENT ================= -->
+      <div id="main" class="alt">
+        <section id="gctool">
+          <div class="inner">
+            <div class="gct-card" role="region" aria-label="Grade converter">
+
+              <!-- Input Row -->
+              <div class="gc-row">
+                <label for="gcMark" class="visually-hidden">Mark out of 100</label>
+                <input id="gcMark" type="number" min="0" max="100" placeholder="Enter mark (0–100)" />
+                <button id="gcBtn" class="button primary" type="button">Convert</button>
+                <button id="gcClear" class="button" type="button">Clear</button>
+              </div>
+
+              <!-- Output -->
+              <p id="gcOut" class="gc-result" aria-live="polite"></p>
+
+              <!-- Grade Reference Table -->
+              <div class="gc-table">
+                <table class="alt">
+                  <thead>
+                    <tr>
+                      <th>Grade</th>
+                      <th>Range</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>HD (High Distinction)</td><td>85–100</td></tr>
+                    <tr><td>D (Distinction)</td><td>75–84</td></tr>
+                    <tr><td>C (Credit)</td><td>65–74</td></tr>
+                    <tr><td>P (Pass)</td><td>50–64</td></tr>
+                    <tr><td>F (Fail)</td><td>0–49</td></tr>
+                  </tbody>
+                </table>
+                <p class="hint">💡 Tip: Press <strong>Enter</strong> after typing a mark to convert quickly.</p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ================= CONTACT SECTION ================= -->
+      <section id="contact">
+        <div class="inner">
+          <div class="contact-method">
+            <span class="icon solid alt fa-envelope"></span>
+            <h3>Email</h3>
+            <a href="mailto:S00312092@myacu.edu.au">S00312092@myacu.edu.au</a>
+          </div>
+
+          <hr />
+
+          <div class="contact-method">
+            <span class="icon solid alt fa-phone"></span>
+            <h3>Phone</h3>
+            <span>+61 421 519 199</span>
+          </div>
+
+          <hr />
+
+          <div class="contact-method">
+            <span class="icon solid alt fa-home"></span>
+            <h3>Address</h3>
+            <span>Australian Catholic University, Strathfield, NSW</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FOOTER ================= -->
+      <footer id="footer">
+        <div class="inner">
+          <ul class="icons">
+            <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+            <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+            <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+          </ul>
+          <ul class="copyright">
+            <li>© 2025 Lauren Souris</li>
+            <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>
